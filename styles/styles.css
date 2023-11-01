@@ -1,0 +1,234 @@
+/* GLOBALS */
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+/*=============================================
+ESCRITORIO (XL revisamos en 1366px en adelante)
+===============================================*/
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+}
+
+.header .cont-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .cont-logo p {
+  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header .cont-logo img {
+  height: 80px;
+}
+/* NAV-BAR */
+
+.nav-bar a {
+  border: 2px solid rgb(242, 178, 46);
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: rgb(242, 178, 46);
+  font-size: 20px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.nav-bar a:hover {
+  background: rgb(242, 178, 46);
+  color: #131313;
+  font-weight: bold;
+}
+
+.navbar-moblie {
+  display: none;
+}
+/* banner */
+
+.banner {
+  background-image: linear-gradient(120deg, #131313 60%, #ffb84d 40%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner .banner-cont {
+  width: fit-content;
+}
+
+.banner .banner-cont h3 {
+  font-size: 40px;
+  color: #eaeaea;
+}
+
+.banner .banner-cont h2 {
+  font-size: 90px;
+  color: #eaeaea;
+  font-weight: bold;
+}
+
+.banner .banner-cont p {
+  color: #9e9898;
+  font-size: 18px;
+  width: 600px;
+  margin-bottom: 40px;
+}
+
+.banner .banner-cont .btn-home {
+  margin-top: 50px;
+  background: #ff2e02;
+  padding: 10px 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #eaeaea;
+  border-radius: 6px;
+  font-size: 20px;
+  border: 2px solid #ff2e02;
+  transition: 0.3s;
+}
+.banner .banner-cont .btn-home:hover {
+  background: transparent;
+  color: #ff2e02;
+}
+
+.banner .banner-img img {
+  max-width: 700px;
+  width: 95%;
+  user-select: none;
+  animation: animation-img-banner 20s linear infinite;
+}
+
+/*=============================================
+TABLET VERTICAL (MD revisamos en 768px)
+===============================================*/
+@media (max-width: 768px) {
+  /* header */
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .cont-logo {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-bar {
+    display: none;
+  }
+  .navbar-moblie {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgb(242, 178, 46);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 200;
+  }
+
+  .navbar-moblie a {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    background: #131313;
+    border: 2px solid #000;
+    border-radius: 50%;
+    color: rgb(242, 178, 46);
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+  }
+
+  .navbar-moblie a:hover {
+    background: rgb(242, 178, 46);
+    color: #131313;
+  }
+
+  /* banner */
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner .banner-cont h3 {
+    margin-top: 100px;
+    font-size: 30px;
+    color: #eaeaea;
+  }
+
+  .banner .banner-cont h2 {
+    font-size: 50px;
+    color: #eaeaea;
+    font-weight: bold;
+  }
+
+  .banner .banner-cont p {
+    width: auto;
+  }
+
+  .banner .banner-cont {
+    width: 100%;
+    padding: 20px;
+  }
+}
+/*=============================================
+TABLET HORIZONTAL (LG revisamos en 1024px)
+===============================================*/
+/* @media (max-width: 1199px) and (min-width: 992px) {
+} */
+
+/* @media (max-width: 991px) and (min-width: 768px) {
+} */
+
+/*=============================================
+MOVIL HORIZONTAL (SM revisamos en 576px)
+===============================================*/
+/* @media (max-width: 767px) and (min-width: 576px) {
+} */
+
+/*=============================================
+MOVIL VERTICAL ( revisamos en 320px)
+===============================================*/
+/* @media (max-width: 575px) {
+} */
+
+@keyframes animation-img-banner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
